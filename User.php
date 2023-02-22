@@ -16,7 +16,8 @@ class User
     /**
      * @return void
      */
-    private function __validate() {
+    private function __validate(): void
+    {
         $validator = Validation::createValidator();
 
 
@@ -47,7 +48,7 @@ class User
      * @param string $mail
      * @param string $password
      */
-    function __construct(string $id, string $name, string $mail, string $password, string $timestamp = '') {
+    function __construct(string $id, string $name, string $mail, string $password) {
         $this->id = $id;
         $this->name = $name;
         $this->mail = $mail;
@@ -56,7 +57,11 @@ class User
         $this->timestamp = date(DATE_RFC822);
     }
 
-    function returnTimeCreate() {
+    /**
+     * @return string
+     */
+    function returnTimeCreate(): string
+    {
         return $this->timestamp;
     }
 
