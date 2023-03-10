@@ -23,8 +23,8 @@ $artem = new User('2', 'Artem', 'Artem@gmail.com', 'qwerty1234567');
 echo PHP_EOL.$alexander->returnTimeCreate();
 $comments = [];
 
-$comments[] = new Comment($alexander, 'Artem loh');
-$comments[] = new Comment($artem, 'Sam pidor');
+$comments[] = new Comment($alexander, 'Hello, Artem');
+$comments[] = new Comment($artem, 'Hi, Alexander');
 echo PHP_EOL."Insert time: ".PHP_EOL;
 $datetime = readline();
 
